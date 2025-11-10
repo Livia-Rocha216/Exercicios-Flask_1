@@ -7,3 +7,9 @@ app = Flask(__name__)
 def index():
     return "<h1>Hello, Flask!</h1>"
 
+#Exercício 2
+@app.route('/versao')
+def versao():
+    versao = "1.20.1"
+    return f"App v{versao}"
+
