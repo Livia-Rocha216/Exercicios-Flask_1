@@ -32,3 +32,13 @@ def home():
 @app.route('/pagina')
 def pagina():
     return render_template('index.html')
+
+# Exercício 7
+@app.route('/buscar/<item>')
+def buscar(item):
+    itens = ["sapato", "calça", "chapéu", "óculos"]
+    for it in itens:
+        if it != item:
+            return f"O item {item.capitalize()} não foi encontrado."
+        else:
+            return f"O item {item.capitalize()} foi encontrado!"
