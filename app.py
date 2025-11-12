@@ -17,3 +17,8 @@ def versao():
 @app.route('/saudar/<nome>')
 def saudar(nome):
     return f"Olá, {nome.capitalize()}"
+
+# Exercício 4
+@app.route('/quadrado/<int:n>')
+def quadrado(n):
+    return f"{n}² = {n * n}"
