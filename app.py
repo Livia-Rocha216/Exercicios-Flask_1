@@ -22,3 +22,8 @@ def saudar(nome):
 @app.route('/quadrado/<int:n>')
 def quadrado(n):
     return f"{n}² = {n * n}"
+
+# Exercício 5
+@app.route('/home')
+def home():
+    return redirect('/')
